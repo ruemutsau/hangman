@@ -1,5 +1,8 @@
 Project Hangman
 I created the Hangman project as a component of my AiCore Data Analytics training. In the classic game of hangman, one player thinks of a word, and the other player has a set number of attempts to guess it. This is an example of how the Hangman game is played: the player attempts to guess the word that the computer randomly selects from a pre-established list.
+
+
+
 This project's primary goal was to review and practise fundamental Python syntax. Because it makes use of OOP principles, it is centred on the Hangman class, which has three methods:
 __init__(self, word_list, num_lives=5), that initialises the attributes as indicated in the docstring;
 check_letter(self, letter) -> None, that checks if the input letter provided by the user is in the random word;
