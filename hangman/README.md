@@ -15,6 +15,62 @@ letter = input("Please enter a letter: ")
 if len(letter) != 1:
     print("Please, enter just one character")
     To test the code, the ask_letter() method can be called within the play_game() function. In case of a wrong input of more than one character
-    
-    To test the code, the ask_letter() method can be called within the play_game() function. In case of a wrong input of more than one character, the programme is instructed to print the following mess
-This is an image of the message that is printed when the user enters an input of more than one character
+All required functionalities implemented in M2 are marked in hangman_solution.py as # TODO 2. M2 required the initialisation of the program's attributes as required in the docstring. These were as below:
+
+ def __init__(self, word_list, num_lives=5):
+        self.word = random.choice(word_list)
+        self.word_guessed = list('_' * len(self.word))
+        self.num_letters = len(set(list(self.word)))
+        self.num_lives = num_lives
+        self.list_letters = []
+        print(f"The mistery word has {self.num_letters} characters")
+        print(f"{self.word_guessed}")
+
+
+'apple', 'banana', 'orange', 'pear', 'strawberry', and 'watermelon' are among the six items in the word_list list that make up the attribute word of the string type that is given to a word selected at random by a computer from that list. I imported the random package in order to make this random pick possible. I chose to utilise the len() string function to create the word_guessed list attribute, which has as many '_' strings as there are characters in the word that was randomly selected. The integer number of distinct letters in the word that have not yet been guessed is stored in the variable num_letters. In order to accomplish this, I used the list() technique to first convert word into a list type. Then, I used len() on the unique letters inside the list.
+
+To check whether the __init__ method worked, __init__(word_list) can be called within the play_game() function, thus initialising the messages seen in the introduction
+
+As a bonus task, we were additionally invited to find a way to print diagrams that resembled the classic Handman drawings. My solution to the challenge was to create the following list of visuals, which I called self.list_visual.
+
+
+self.list_visual = [
+            '''
+            __________
+              |      |
+              |    \ O /
+              |      |
+              |     /\\
+            __|____
+            ''',''' 
+            __________
+              |      |
+              |      O
+              |      |
+              |     /\\
+            __|____
+            ''','''
+             __________
+              |      |
+              |      O
+              |      |
+              |     /
+            __|____
+            ''','''
+             __________
+              |      |
+              |      O
+              |      |
+              |
+            __|____
+            ''','''
+             __________
+              |      |
+              |      O
+              |
+              |
+            __|____
+            ''']
+
+
+            
